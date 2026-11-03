@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inventario | AutoElite</title>
+  <meta name="description" content="Autos nuevos y seminuevos verificados, con financiamiento y taller propio.">
+  <meta property="og:title" content="Inventario | AutoElite">
+  <meta property="og:description" content="Autos nuevos y seminuevos verificados, con financiamiento y taller propio.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#0e3a4a">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230e3a4a'/%3E%3Cpath d='M16 6l8 20h-4l-1.5-4h-5L12 26H8z' fill='%23c8302b'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/config.js" defer></script>
+  <script src="js/data.js" defer></script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+  <header class="site-header">
+    <div class="wrap bar">
+      <a class="logo" href="index.html">AutoElite</a>
+      <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="nav">Menú</button>
+      <nav id="nav" class="nav" aria-label="Principal"><a href="index.html">Inicio</a><a href="inventario.html" aria-current="page">Inventario</a><a href="servicios.html">Servicios</a><a href="contacto.html">Contacto</a><a href="publicar.html">Vende tu auto</a><a href="cuenta.html">Mi cuenta</a></nav>
+    </div>
+  </header>
+  <main id="contenido">
+    <section class="page-head"><div class="wrap"><h1>Inventario</h1><p>Filtra por tipo, presupuesto o condición. Cada precio es el precio de lista.</p></div></section>
+    <section class="section">
+      <div class="wrap">
+        <form class="filters" id="filters" aria-label="Filtrar inventario" style="margin-top:0">
+          <div class="field"><label for="f-q">Buscar por nombre</label><input id="f-q" type="search" placeholder="Ej. Corolla"></div>
+          <div class="field"><label for="f-cond">Condición</label>
+            <select id="f-cond"><option value="">Todos</option><option>Nuevo</option><option>Seminuevo</option></select></div>
+          <div class="field"><label for="f-tipo">Tipo</label>
+            <select id="f-tipo"><option value="">Todos</option></select></div>
+          <div class="field"><label for="f-max">Presupuesto máximo</label>
+            <select id="f-max"><option value="">Sin límite</option><option value="500000">$500,000</option><option value="700000">$700,000</option><option value="900000">$900,000</option></select></div>
+          <div class="field"><label for="f-sort">Ordenar por</label>
+            <select id="f-sort"><option value="">Destacados</option><option value="asc">Precio: menor a mayor</option><option value="desc">Precio: mayor a menor</option><option value="km">Menor kilometraje</option></select></div>
+        </form>
+        <p class="count" id="count" aria-live="polite"></p>
+        <div class="grid" id="grid"></div>
+        <div class="empty" id="empty" hidden>
+          <p>No hay autos con esos filtros. Quita alguno para ver más opciones.</p>
+          <button class="btn btn-dark" id="reset" type="button">Quitar filtros</button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="wrap foot-grid">
+      <div><span class="logo">AutoElite</span><p style="margin-top:.75rem;max-width:34ch">Autos nuevos y seminuevos verificados, con financiamiento y taller propio.</p></div>
+      <nav aria-label="Pie de página"><strong>Sitio</strong><a href="index.html">Inicio</a><a href="inventario.html">Inventario</a><a href="servicios.html">Servicios</a><a href="contacto.html">Contacto</a><a href="publicar.html">Vende tu auto</a><a href="cuenta.html">Mi cuenta</a></nav>
+      <div><strong>Visítanos</strong><p>Av. Principal 1234, Zona Automotriz<br>Ciudad de México, CDMX<br>Lunes a sábado, 9:00 a 19:00</p>
+        <a href="https://www.google.com/maps/search/?api=1&query=Av.+Principal+1234+Ciudad+de+Mexico" target="_blank" rel="noopener">Cómo llegar</a>
+        <a data-msg="Hola, quisiera información sobre sus autos.">Escribir por WhatsApp</a></div>
+    </div>
+    <div class="wrap legal"><p>&copy; <span id="year">2026</span> AutoElite Concesionaria. Todos los derechos reservados.</p></div>
+  </footer>
+  <dialog id="detail" aria-labelledby="d-title"></dialog>
+  <a class="wa-float" id="wa-float" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15L2 22l5.1-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.200Zm-3-12.700c-.3 0-.6.200-.8.500-.4.600-.5 1.400 0 2.400a9 9 0 0 0 4.200 3.800c1.300.5 2 .4 2.600 0 .3-.2.5-.5.5-.9l-1.600-.9-.7.700a5.500 5.500 0 0 1-2.300-2.100l.6-.7L9 7.500Z"/></svg></a>
+</body>
+</html>
