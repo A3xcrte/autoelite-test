@@ -13,7 +13,7 @@ Cuentas de usuario, anuncios con fotos, administración y notificaciones.
 En `api/config.php` cambia `'driver' => 'mysql'` por `'driver' => 'sqlite'`. Solo necesitas Apache. Las tablas y el administrador se crean solos en `storage/autoelite.sqlite`.
 
 ## Administrador de ejemplo
-- Correo: `admin@autoelite.com`  -  Contraseña: `Demo1234` (cámbiala cuando puedas)
+- Correo: `admin@autoelite.com`  -  Contraseña: `Demo1234` 
 
 ## Cómo funciona
 - Cualquiera puede crear cuenta y publicar un auto con hasta 6 fotos (**Vende tu auto**).
